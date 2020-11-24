@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="script.js" charset="utf-8" defer></script>
+    <title></title>
+</head>
+
+<body>
+    <h1>Password Generator</h1>
+    <p id="message">Copied to Clipboard</p>
+    <div class="container">
+        <div class="box">
+            <div class="box-header">
+                <div id="display" class="display"></div>
+                <button id="copy"><i class="fas fa-clipboard"></i></button>
+            </div>
+            <div class="box-body">
+                <div class="form-control">
+                    <label for="length">Length of password</label>
+                    <input type="number" value="8" min="8" max="256" id="length" />
+                </div>
+                <div class="form-control">
+                    <label for="lowercase">Include lowercase alphabets</label>
+                    <label for="lowercase" class="check">
+                        <input type="checkbox" id="lowercase" />
+                        <div class="dot"></div>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="uppercase">Include uppercase alphabets</label>
+                    <label for="uppercase" class="check">
+                        <input type="checkbox" id="uppercase" />
+                        <div class="dot"></div>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="numbers">Include numbers</label>
+                    <label for="numbers" class="check">
+                        <input type="checkbox" id="numbers" />
+                        <div class="dot"></div>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="symbols">Include symbols</label>
+                    <label for="symbols" class="check">
+                        <input type="checkbox" id="symbols" />
+                        <div class="dot"></div>
+                    </label>
+                </div>
+                <button id="generate">Generate Password</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/vshalt" target="_blank">Vishal Hosamani</a></p>
+    </footer>
+</body>
+
+</html>

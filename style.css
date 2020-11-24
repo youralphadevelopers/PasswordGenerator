@@ -1,0 +1,200 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  position: relative;
+  background-color: #1c1c1c;
+  font-family: Helvetica, Arial, sans-serif;
+}
+body>p{
+  color: white;
+  position: fixed;
+  text-align: center;
+  font-weight: bold;
+  top: 0;
+  width: 100%;
+  border-radius: 20px;
+  transform: translateY(-100%);
+  font-size: 2.5rem;
+  background: white;
+  color: #1c1c1c;
+  padding: 1rem;
+  transition: transform 0.5s ease;
+}
+.display::-webkit-scrollbar{
+  width: 6px;
+}
+.display::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius: 6px;
+}
+.display::-webkit-scrollbar-track{
+  background: #1c1c1c;
+  border-radius: 6px;
+}
+body>h1{
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.container{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box{
+  /* height: 400px; */
+  width: 400px;
+}
+button{
+  -webkit-tap-highlight-color: transparent;
+}
+button:hover{
+  background: white;
+  color: #1c1c1c;
+}
+button:active{
+  transform: scale(0.95);
+}
+.box-header{
+  background: #ccc;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+.display{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 1.8rem;
+  padding: 1rem;
+  overflow-y: auto;
+  width: 90%;
+  height: 100%;
+  margin-right: 10px;
+  font-family: inherit;
+}
+.box-header button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  margin: 0 10px 0 0;
+  background: #1c1c1c;
+  color: #ddd;
+}
+.box-body{
+  padding: 20px;
+  background: #2c2c54;
+  color: white;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 10px 10px;
+}
+.form-control{
+  display: flex;
+  margin: 0.8rem 0;
+  justify-content: space-between;
+}
+.form-control label{
+  font-size: 1.2rem;
+}
+.form-control input{
+  transform: scale(2);
+}
+.form-control input[type="number"] {
+  transform: scale(1.2);
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.check input{
+  display: none;
+  visibility: hidden;
+  cursor: pointer;
+}
+.check{
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+  background: #1c1c1c;
+  border-radius: 50px;
+  position: relative;
+}
+.dot{
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  background: white;
+  transition: transform 0.2s ease;
+}
+.check>input[type="checkbox"]:checked + .dot{
+  transform: translateX(24px);
+}
+#generate{
+  color: white;
+  background: #1c1c1c;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 0 1rem;
+  color: white;
+}
+footer a{
+  color: white;
+  font-weight: 600;
+}
+@media only screen and (max-width:360px) {
+  body> h1{
+    font-size: 1.5rem;
+  }
+  body>p{
+    font-size: 1.5rem;
+  }
+  #generate{
+    font-size: 1rem;
+  }
+.form-control label{
+  font-size: 1rem;
+}
+}
+@media only screen and (max-width: 400px) {
+  .box{
+    width: 90vw;
+  }
+.form-control label{
+  font-size: 1rem;
+}
+}
+@media only screen and (max-width: 768px) {
+  button:hover{
+    background: #1c1c1c;
+    color: white;
+  }
+}
